@@ -2,7 +2,7 @@ package Ejercicios;
 
 import java.util.Scanner;
 
-public class Practica1 {
+public class Prueba1 {
 
     public static void cambioEnMonedas() {
 
