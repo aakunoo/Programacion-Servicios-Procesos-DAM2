@@ -1,10 +1,10 @@
-package Ejercicios;
+package ejercicios;
 
 import java.util.Scanner;
 
 public class Prueba1 {
 
-    public static void cambioEnMonedas() {
+	   public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
 
@@ -31,7 +31,7 @@ public class Prueba1 {
             System.out.println("Monedas de 20 centimos: " + (totalCentimos / 20));
             totalCentimos -= (totalCentimos / 20) * 20;
         }
-        if (totalCentimos >= 10) {
+        if (totalCentimos >= 10) {	
             System.out.println("Monedas de 10 centimos: " + (totalCentimos / 10));
             totalCentimos -= (totalCentimos / 10) * 10;
         }
@@ -49,7 +49,6 @@ public class Prueba1 {
         scanner.close();
     }
 
-    public static void main(String[] args) {
-        cambioEnMonedas();
-    }
+ 
 }
+
