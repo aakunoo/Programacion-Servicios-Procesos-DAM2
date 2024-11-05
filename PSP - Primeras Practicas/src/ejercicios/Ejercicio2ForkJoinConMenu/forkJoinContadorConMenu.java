@@ -9,7 +9,7 @@ public class forkJoinContadorConMenu extends RecursiveTask <Integer>{
 	private int start, end;
 	private String[] arr;
 
-	// Constructor para la tarea inicial
+
 	public forkJoinContadorConMenu(String palabra, String[] arr) {
 		this.palabra = palabra;
 		this.arr = arr;
@@ -17,7 +17,6 @@ public class forkJoinContadorConMenu extends RecursiveTask <Integer>{
 		this.end = arr.length;
 	}
 
-	// Constructor para las subtareas
 	public forkJoinContadorConMenu(String palabra, String[] arr, int start, int end) {
 		this.palabra = palabra;
 		this.arr = arr;
