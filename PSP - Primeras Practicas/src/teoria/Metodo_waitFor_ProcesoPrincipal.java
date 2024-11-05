@@ -4,7 +4,8 @@ public class Metodo_waitFor_ProcesoPrincipal {
 
 	public static void main(String[] args) {
 		
-		String[] infoProceso = {"Notepad.exe" , "notas.txt"};
+		String[] infoProceso = {"java" , "teoria.Metodo_waitFor_ProcesoSecundario"};
+		//String[] infoProceso = {"Notepad.exe" , "notas.txt"};
 		
 		try {
 			Process proceso = Runtime.getRuntime().exec(infoProceso);
