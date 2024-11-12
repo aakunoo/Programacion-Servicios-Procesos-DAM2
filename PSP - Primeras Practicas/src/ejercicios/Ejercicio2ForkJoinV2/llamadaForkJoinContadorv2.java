@@ -1,9 +1,9 @@
-package ejercicios.Ejercicio2ForkJoinV2;
+package Ejercicios.Ejercicio2ForkJoinV2;
 
 import java.util.Scanner;
 import java.util.concurrent.ForkJoinPool;
 
-import ejercicios.Ejercicio2ForkJoin.forkJoinContador;
+import Ejercicios.Ejercicio2ForkJoin.forkJoinContador;
 
 public class llamadaForkJoinContadorv2 {
 

@@ -1,4 +1,4 @@
-package ejercicios.Ejercicio2ForkJoin;
+package Ejercicios.Ejercicio2ForkJoin;
 
 import java.util.Scanner;
 import java.util.concurrent.ForkJoinPool;

@@ -1,4 +1,4 @@
-package ejercicios.Ejercicio2ForkJoinConMenu;
+package Ejercicios.Ejercicio2ForkJoinConMenu;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

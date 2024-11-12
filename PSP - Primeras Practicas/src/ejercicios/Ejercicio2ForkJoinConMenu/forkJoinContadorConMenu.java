@@ -1,4 +1,4 @@
-package ejercicios.Ejercicio2ForkJoinConMenu;
+package Ejercicios.Ejercicio2ForkJoinConMenu;
 
 import java.util.concurrent.RecursiveTask;
 
