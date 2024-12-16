@@ -1,38 +1,50 @@
-package p1;
+package parte1.Ejercicio1;
 
 import java.util.concurrent.RecursiveTask;
 
 public class ClaseForkJoin extends RecursiveTask<Integer>{
-	private static final long UIDVersion = 1;
-	private int numero1, numero2;
-	private static final int hilos = 1000;//Umbral que se pide
+	
+	private static final long UIDVersion = 1L;
+	private int numstart, numend;
+	private static final int UMBRAL = 1000; // UMBRAL
+	
 	//Constructor de la clase
-	public ClaseForkJoin(int numero1, int numero2) {
+	public ClaseForkJoin(int numstart, int numend) {
 		super();
-		this.numero1 = numero1;
-		this.numero2 = numero2;
+		this.numstart = numstart;
+		this.numend = numend;
 	}
 	@Override
 	protected Integer compute() {
-		// TODO Auto-generated method stub
+
 		int suma = 0;//Variable donde se almacenara la suma
-		//Para calcular el umbral
-		if(numero2-numero1 <= hilos) {
+		
+		
+		if(numend-numstart <= UMBRAL) { // Caso base: si el rango es pequeño, calcular directamente
+			
 			//Bucle donde llamamos al metodo esPrimo y si es verdadero se añade a la suma
-			for(int i = numero1; i <= numero2;i++) {
+			
+			for(int i = numstart; i <= numend; i++) {
 				if(esPrimo(i) == true) {
-					suma+=i;
+					suma+= i;
 				}
 			}
+			
 			return suma;
+			
 		}else {
-			int medio = (numero1+numero2)/2;//Dividimos el resultado por la mitad
+			
+			// Caso recursivo: dividir la tarea en dos subtareas
+			int medio = (numstart + numend) / 2; // Calculamos la mitad
+			
 			//Llamamos a las clases
-			ClaseForkJoin subtarea1 = new ClaseForkJoin(numero1, medio);
-			ClaseForkJoin subtarea2 = new ClaseForkJoin(medio, numero2);
+			ClaseForkJoin subtarea1 = new ClaseForkJoin(numstart, medio);
+			ClaseForkJoin subtarea2 = new ClaseForkJoin(medio, numend);
+			
 			//Dividimos las tareas en diferentes hilos
 			subtarea1.fork();
 			subtarea2.fork();
+			
 			//Juntamos los resultados y devolvemos
 			int resultado1 = subtarea1.join();
 			int resultado2 = subtarea2.join();
