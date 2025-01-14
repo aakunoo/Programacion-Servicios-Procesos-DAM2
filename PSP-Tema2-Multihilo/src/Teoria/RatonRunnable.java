@@ -46,5 +46,5 @@ se ejecuta el método run() en un nuevo hilo.*/
 		new Thread(zurron).start();
 		new Thread(jero).start();
 		new Thread(zar).start();	
-	}		
+	}			
 }
