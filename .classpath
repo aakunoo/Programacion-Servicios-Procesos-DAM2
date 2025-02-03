@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Examen 1º Evaluacion/src"/>
+	<classpathentry kind="src" path="ExamenPSPRecuperacion/src"/>
+	<classpathentry kind="src" path="PSP-Tema1/src"/>
+	<classpathentry kind="src" path="PSP-Tema2-Multihilo/src"/>
+	<classpathentry kind="output" path="Examen 1º Evaluacion/bin"/>
+</classpath>
